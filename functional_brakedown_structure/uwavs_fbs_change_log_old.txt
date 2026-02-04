@@ -1,0 +1,87 @@
+
+** D1-N9_UWAVS_D0_FBS_3Z65F7_v1_1_UWAVS2_29SEPT2025_cota.xlsm:
+------------------------------------------------------------------------
+*** Added postition variables as inputs for motors for mirror 1. See cell S553, of tab "Operations
+    (OPR)".
+*** Added postition variables as inputs for motors for mirror 2. See cell S555, of tab "Operations
+    (OPR)".
+*** Added shutter status as input for shutter position. See cell S557, of tab "Operations (OPR)".
+*** Added shutter status as input for Shutter status. See cell S537, of tab "Operations (OPR)".
+*** Added shutter temp, IR cam #1 temp, IR cam #2 temp, Large FOV vis cam temp, and High Speed
+    vis cam as inputs to Operational temperatures. See cell S559, of tab "Operations (OPR)".
+*** Added read position variables to Fast visible camera alignment. See cell S551, of tab 
+    "Operations (OPR)".
+*** Added read position variables to Large FOV visible camera (Visible camera 1) alignment. See
+    cell S549, of tab "Operations (OPR)".
+*** Added GM-2301 Step Count as input to IR camera 1 alignment input. I tried to add GM-2302 as
+    well, however the FBS template would not alow it. I got the error "Variable name does not
+    follow variable naming conventions". See cell S545, of tab "Operations (OPR)".
+*** Added GM-2401, GM-2402, and GM-2403 Step Count as inputs to IR camera 2 alignment input. See
+    cell S547, of tab "Operations (OPR)".
+*** Added Mirror 1 and Mirror 2 positions, and Large FOV vis camera position to Check A40 mirror
+    alignment quality. See cell S12 of "Operations (OPR)".
+*** Added Resolution, Baud Rate, and Channel/Port variables for Blackbody Source Oven to
+    Blackbody Source Configurations. See cell S17 of "Operations (OPR)".
+*** Added Intensity and Luminosity variables to Integrated Sphere Configurations. See cell S20 of
+    "Operations (OPR)".
+*** Added Power, Excitation frequency, and Duty cycle variables to RF generator Configuration. See
+    cell S24 of "Operations (OPR)".
+*** Added Step Count Max and Step Count Min variables to Variac Configurations. See cell S27 of
+    "Operations (OPR)".
+*** Added all Initialization Status variables (cells U115 to U128) as input variables to Check
+    initialization. See cell S39 of "Operations (OPR)".
+*** Added TCN error variable (from "Interfaces (INF)" cell U225) as input to TCN Communication
+    Error Event. See cell S47 of "Operations (OPR)".
+*** Added SDN error variable (from "Interfaces (INF)" cells U158 and U191) as inputs to SDN
+    Communciation Error Event. See Cell S49 of "Operations (OPR)".
+*** Added DAN error variable (from "Interfaces (INF)" cells U91 and U124) as inputs to DAN
+    Communciation Error Event. See Cell S43 of "Operations (OPR)".
+*** Added PON error variable (from "Interfaces (INF)" cells U24 and U57) as inputs to PON
+    Communciation Error Event. See Cell S45 of "Operations (OPR)".
+*** Added IR Camera 1 Health status variable (cell U20), IR Camera 2 Health status variable (cell
+    U65), Large FOV vis camera status variable (cell U104), and High Speed vis camera status
+    variable (cell U141) as inputs to Camera Failure Hardware Event. See cell S52 of "Operations
+    (OPR)".
+*** Added Get TCN IP Address (cell U212), Get TCN Port Number (cell U215), Set TCN Buffer Size
+    (cell U209), and Initialize PON Interface (cell U233) as inputs to PCF 1 for TCN Initialization.
+    See cell S75 of "Operations (OPR)".
+*** Added Get TCN IP Address (cell U245), Get TCN Port Number (cell U248), Set TCN Buffer Size
+    (cell U242), and Initialize PON Interface (cell U266) as inputs to PCF 2 for TCN Initialization.
+    See cell S77 of "Operations (OPR)".
+*** Added Get SDN IP Address (cell U145), Get SDN Port Number (cell U144), Set SDN Buffer Size
+    (cell U241), and Initialize PON Interface (cell U166) as inputs to PCF 1 for SDN Initialization.
+    See cell S80 of "Operations (OPR)".
+*** Added Get PON IP Address (cell U11), Get PON Port Number (cell U14), Set PON Buffer Size
+    (cell U8), and Initialize PON Interface (cell U32) as inputs to PCF 1 for PON Initialization.
+    See cell S83 of "Operations (OPR)".
+*** Added Get PON IP Address (cell U44), Get PON Port Number (cell U47), Set PON Buffer Size
+    (cell U41), and Initialize PON Interface (cell U65) as inputs to PCF 2 for PON Initialization.
+    See cell S85 of "Operations (OPR)".
+*** Added Get DAN IP Address (cell U78), Get DAN Port Number (cell U81), Set DAN Buffer Size
+    (cell U75), and Initialize PON Interface (cell U99) as inputs to PCF 1 for DAN Initialization.
+    See cell S88 of "Operations (OPR)".
+*** Added Get DAN IP Address (cell U111), Get DAN Port Number (cell U114), Set DAN Buffer Size
+    (cell U108), and Initialize PON Interface (cell U132) as inputs to PCF 2 for DAN Initialization.
+    See cell S90 of "Operations (OPR)".
+*** Added Step Count from A40 motors (cells U370, U378, U386, U394, U402 from "COTS (COT)" tab) to X
+    pos for IR Camera 1 Configuration. See cell S149 from "Operations (OPR)".
+*** Added Step Count from A40 motors (cells U370, U378, U386, U394, U402 from "COTS (COT)" tab) to Y
+    pos for IR Camera 1 Configuration. See cell S151 from "Operations (OPR)".
+*** Added Power (cell U266 "COTS (COT)") as input to RF power supply for configuration of Mirror
+    Cleaning. See cell S458 FROM "Operations (OPR)".
+*** Added variables from RF Matching Unit ("COTS (COT)", cells U316 -> U328) as inputs for RF
+    matching box for Mirror Cleaning. See cell S460 from "Operations (OPR)".
+*** Added Limit Switches ("COTS (COT)" cells U366, U368, U374, U376, U382, U384, U390, U392, U398,
+    U400) as inputs to A40 Motors health. See cell S512 from "Operations (OPR)".
+*** Added Camera Status and Temperature for each camera ("COTS (COT)" cells U20, U22, U65, U67,
+    U104, U106, U141, U143) as input to Camera Health. See cell S514 from "Operations (OPR)".
+*** Added IR Camera #2 from "Data Acquisition (DAQ)" (cell U8) as input to HW components: IR
+    camera 2. See cell S584 from "Operations (OPR)".
+*** Added large FOV Visible camera from "Data Acquisition (DAQ)" (cell U10) as input to HW
+    components: VIS camera 1. See cell S586 from "Operations (OPR)".
+*** Added High Speed Visible Camera from "Data Acquisition (DAQ)" (cell U12) as input to HW
+    components: VIS camera 2. See cell S588 from "Operations (OPR)".
+*** Added HW components: IR camera 1 and 2, and HW components: VIS camera 1 and 2 ("Operations
+    (OPR)" cells U583, U585, U587, U589) as inputs to Data Acquisition status flag. See cell U590
+    from "Operations (OPR)".
+

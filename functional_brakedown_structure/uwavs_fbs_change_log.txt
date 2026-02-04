@@ -1,0 +1,65 @@
+
+** D1-N9_UWAVS_D0_FBS_3Z65F7_v1_1_UWAVS2_07OCT2025_cota.xlsm:
+------------------------------------------------------------------------
+*** Operations (OPR):Monitor:Evaluate functionalities:Alignment:SUMMARY status flag:HW components Mirror 1 motors (cell S553)
+        Added: Cells U348 "COTS (COT)", U351 "COTS (COT)"
+
+*** Operations (OPR):Monitor:Evaluate functionalities:Alignment:SUMMARY status flag:HW components Mirror 2 motors (cell S555)
+        Added: Cells U355 "COTS (COT)", U358 "COTS (COT)", U361 "COTS (COT)"
+
+*** Operations (OPR):Monitor:Evaluate functionalities:Alignment:SUMMARY status flag:HW components shutter position (cell S557)
+        Added: Cells U335 "COTS (COT)", U337 "COTS (COT)", U339 "COTS (COT)", U342 "COTS (COT)"
+
+*** Operations (OPR):Monitor:Evaluate functionalities:Alignment:SUMMARY status flag:Operational temperatures (cell S559)
+        Added: Cells U533 "COTS (COT)", U535 "COTS (COT)", U537 "COTS (COT)", U539 "COTS (COT)", U543 "COTS (COT)"
+
+*** Operations (OPR):Monitor:Evaluate functionalities:Alignment:SUMMARY status flag:Alignment processing/offset calcualtion (cell S543)
+        Added: Cells U346 "Data Processing (DPC)", U348 "Data Processing (DPC)", U253 "Data Processing (DPC)"
+
+*** Operations (OPR):Monitor:Evaluate functionalities:Collect Light:SUMMARY status flag:Collect light Shutter position (cell S571)
+        Added: Cells U332 "COTS (COT)", U335 "COTS (COT)", U337 "COTS (COT)", U339 "COTS (COT)"
+
+*** Operations (OPR):Monitor:Evaluate functionalities:Data Acquisition:SUMMARY status flag:Data Acquisition status flag (cell S590)
+        Added: Cells U583 "Operations (OPR)",  U585 "Operations (OPR)", U587 "Operations (OPR)",  U589 "Operations (OPR)" 
+
+*** Operations (OPR):Monitor:Evaluate functionalities:Data Processing:SUMMARY status flag:Data Processing Status flag (cell S590)
+        Added: Cells U597 "Operations (OPR)",  U599 "Operations (OPR)", U601 "Operations (OPR)", U603 "Operations (OPR)", U605 "Operations (OPR)"
+
+*** Operations (OPR):Monitor:Evaluate functionalities:Transmission Calibration:SUMMARY status flag:HW components Shutter position (cell S643)
+        Added: Cells U332 "COTS (COT)", U335 "COTS (COT)"
+
+*** Operations (OPR):Monitor:Evaluate functionalities:Transmission Calibration:SUMMARY status flag:Summary Transmission calibration status flag (cell S653)
+        Added: Cells U644 "Operations (OPR)", U646 "Operations (OPR)", U648 "Operations (OPR)", U650 "Operations (OPR)", U652 "Operations (OPR)", U656 "Operations (OPR)", U658 "Operations (OPR)"
+
+*** Operations (OPR):Monitor:Evaluate functionalities:Transmission Calibration:SUMMARY status flag:Transmission calibration configuration (cell S657)
+        Added: Cells U353 "Data Processing (DPC)"
+
+*** Operations (OPR):Monitor:Evaluate functionalities:Mirror cleaning:SUMMARY status flag:Summary Mirror cleaning status flag (cell S615)
+        Added: Cells U614 "Operations (OPR)", U612 "Operations (OPR)"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

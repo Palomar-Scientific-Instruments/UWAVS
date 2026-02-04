@@ -1,0 +1,129 @@
+# Stream protocol file for RF GeneRF Generator driver
+
+# Network and comms
+#ipaddr-rb {
+##  out 0x00, 0x01, 0x00, 0x00, 0x00, 0x06, 0x0A, 0x41, 0x13, 0xEC, 0X00, 0X01;
+#  out 0x01, 0x00, 0xEC, 0x13, 0x41, 0x0A, 0x06, 0x00, 0x00, 0x00, 0x01, 0x00;
+#  in  "%d";
+#}
+#ipmode-rb {
+##  out 0x00, 0x01, 0x00, 0x00, 0x00, 0x06, 0x0A, 0x41, 0x13, 0xEC, 0X00, 0X01;
+#  out 0x01, 0x00, 0xEC, 0x13, 0x41, 0x0A, 0x06, 0x00, 0x00, 0x00, 0x01, 0x00;
+#  in  "%d";
+#}
+#hostname-rb {
+##  out 0x00, 0x01, 0x00, 0x00, 0x00, 0x06, 0x0A, 0x41, 0x13, 0xEC, 0X00, 0X01;
+#  out 0x01, 0x00, 0xEC, 0x13, 0x41, 0x0A, 0x06, 0x00, 0x00, 0x00, 0x01, 0x00;
+#  in  "%d";
+#}
+ipaddr-rb {
+  out "IPADDR?";
+  in  "%s";
+}
+ipmode-rb {
+  out "IPMODE?";
+  in  "%d";
+}
+hostname-rb {
+  out "HOSTNAME?";
+  in  "%39c";
+}
+#macaddr-rb {
+#  out "MACADDR?";
+#  in  "%s";
+#}
+#netmask-rb {
+#  out "NETMASK?";
+#  in  "%s";
+#}
+#gateway-rb {
+#  out "GATEWAY?";
+#  in  "%s";
+#}
+#
+
+## General state
+#rf-status-rb {
+#  out "RFSTATUS?";
+#  in  "%s";
+#}
+rf-power-rb {
+  out "GETPOWER?";
+  in  "%d";
+}
+#cex-roll-rb {
+#  out "CEXROLL?";
+#  in  "%s";
+#}
+#rel-phase-rb {
+#  out "RELPHASE?";
+#  in  "%s";
+#}
+#sync-bus-rb {
+#  out "SYNCBUS?";
+#  in  "%s";
+#}
+match-mode-rb {
+  out "GETMATCHMODE?";
+  in "%d"
+}
+#
+## Power
+#power-mode-rb {
+#  out "POWERMODE?";
+#  in "%s";
+#}
+#reflect-power-rb {
+#  out "REFPOWER?";
+#  in "%s";
+#}
+#tune-cap-pos-rb {
+#  out "TUNECAPPOS?";
+#  in "%s";
+#}
+#load-cap-pos-rb {
+#  out "LOADCAPPOS?";
+#  in "%s";
+#}
+set-point-rb {
+  out "SETPOWER$ %d";
+  @init { rf-power-rb; }
+#  in "%d";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

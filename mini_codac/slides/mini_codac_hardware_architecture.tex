@@ -1,0 +1,38 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+
+\usepackage{tikz}
+\usetikzlibrary {positioning}
+\usetikzlibrary{arrows.meta}
+\usetikzlibrary{math} %needed tikz library
+\usetikzlibrary{patterns}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.11}
+\usetikzlibrary{datavisualization}
+
+\begin{document}
+	\begin{figure}
+		\center
+	\begin{tikzpicture}
+		\tikzmath{\xpad=3; \ypad=2; \fcXstart=0; \fcYstart=0; \fcWidth=4; \fcHieght=2; \pshXstart = 0; \pshYstart = \fcYstart+\fcHieght+\ypad; \pshWidth = 4; \pshHieght = 2;   \rfXstart=\fcXstart+\fcWidth+\xpad; \rfYstart=\fcYstart; \rfWidth=\fcWidth; \rfHieght=\fcHieght;}
+	
+		\draw (\pshXstart, \pshYstart) rectangle (\pshXstart+\pshWidth, \pshYstart+\pshHieght);
+		\draw (\fcXstart,\fcYstart) rectangle (\fcXstart+\fcWidth, \fcYstart+\fcHieght);
+		\draw (\rfXstart, \rfYstart) rectangle (\rfXstart+\rfWidth, \rfYstart+\rfHieght);
+		
+		\draw node at (\pshXstart+0.5*\pshWidth, \pshYstart+0.5*\pshHieght) {PSH (Virtual Machine)};
+		\draw node at (\fcXstart+0.5*\fcWidth, \fcYstart+0.5*\fcHieght) {Master Controller};
+		\draw node at (\rfXstart+0.5*\rfWidth, \rfYstart+0.5*\rfHieght) {RF Generator};
+		\draw node[right] at (\fcXstart+0.5*\fcWidth, \fcYstart+\fcHieght+0.5*\pshYstart-0.5*\fcHieght) {EPICS Stream};
+		\draw node[above] at (\fcXstart+\fcWidth+0.5*\xpad, \fcYstart+0.5*\fcHieght) {TCP};
+		
+		\draw (\pshXstart+0.5*\pshWidth, \pshYstart) -- (\pshXstart+0.5*\pshWidth, \fcYstart+\fcHieght);
+		\draw (\fcXstart+\fcWidth, \fcYstart+0.5*\fcHieght) -- (\rfXstart,  \rfYstart+0.5*\rfHieght);
+	\end{tikzpicture}
+	
+	\caption{Hardware architecture for RF Generator Mini-CODAC system.}
+	\end{figure}
+\end{document}

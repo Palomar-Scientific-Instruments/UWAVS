@@ -1,0 +1,23 @@
+
+*** Mirror cleaning Readiness & Start conditions/procedure ("55.GA UWAVES Instrument and
+    Control Archetecture", page 42):
+    
+    1) Receive flag from Diagnostic Control group (D1) to participate in upcoming mirror cleaning.
+    
+    2) 55.GA executes a sequence to get ready.
+
+        2a) Open Bullnose shutter.
+
+        2b) Load required settings into all RF components.
+
+        2c) Setup monitoring of forward and reverse power at the RF matcher.
+
+    3) D1 monitors gase pressure inside vacuum vessel.
+
+    4) Once pressure inside vessel is nominal, D1 sends trigger to start cleaning.
+
+*** Mirror cleaning Stop conditions/procedure ("55.GA UWAVES Instrument and Control Archetecture",
+    page 42):
+
+    Mirror cleaning can be stopped or paused at any time. It can be stopped if excess reverse power
+    is detected. Or, under normal operation it will stop after a predetermined amount of time.
