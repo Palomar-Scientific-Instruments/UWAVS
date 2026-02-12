@@ -3,3 +3,4 @@
 *.EAP
 *.eap
 .~lock*
+*.csv
