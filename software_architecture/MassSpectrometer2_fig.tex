@@ -1,0 +1,72 @@
+\begin{tikzpicture}
+  \tikzmath{\xstart = 4; \deWidth = 2; \vsWidth = 3; \vsHeight = 0.5; \yHeight = 4; \gap = 0.5; \radDot = 0.075; \radCirc = 0.2; \fgap = 0.25; \ydeStart = 0.5; \deWidth = 3; \deHeight = 1; \xline = 0.25; \coLength = 0.75; \xcoStart = 11.5; \ycoStart = 8;}
+ 
+% Drawing spectroscope
+  \draw[] (\xstart, 0) -- (\xstart, \yHeight);
+  \draw[] (\xstart, \yHeight + \gap) -- (\xstart, \yHeight + \gap + \yHeight);
+  \draw[] node[right] at (\xstart  + 6.2, \yHeight + 0.5 * \gap) {$\vec{B}_2$};
+  
+% Drawing field lines for mass spectrometer
+  \foreach \xloc in {1,2,...,6}
+    \foreach \yloc in {0,1,...,8}
+    {
+      \draw[black, fill] (\xstart + \xloc, \fgap + \yloc) circle[radius = \radDot];
+      \draw[black] (\xstart + \xloc, \fgap + \yloc) circle[radius = \radCirc];
+    }
+
+% Drawing detectors
+  \draw (\xstart - \deWidth, \ydeStart + \deHeight) rectangle (\xstart, \ydeStart); % Bottom detector  
+  \draw (\xstart - \deWidth, \yHeight + \gap + \yHeight - \gap - \deHeight) rectangle (\xstart, \yHeight + \gap + \yHeight - \ydeStart); % Top detector
+  \draw[] node[] at (\xstart - 0.5 * \deWidth, \ydeStart + 0.5 * \deHeight) {Detector}; % detector label
+  \draw[] node[] at (\xstart - 0.5 * \deWidth, \yHeight + \gap + \yHeight - \ydeStart - 0.5 * \deHeight) {Detector}; % detector label
+  
+% Drawing velocity selector
+  \draw (\xstart - \vsWidth, \yHeight) -- (\xstart - \vsWidth, \yHeight - \vsHeight) -- (\xstart, \yHeight - \vsHeight); % Bottom part
+  \draw (\xstart - \vsWidth, \yHeight + \gap) -- (\xstart - \vsWidth, \yHeight + \gap + \vsHeight) -- (\xstart, \yHeight + \gap + \vsHeight); % Top part
+  \draw[] node[above] at (\xstart - 0.5 * \deWidth, 1.5 * \yHeight + 1.5 * \gap + 1.5 * \vsHeight - 0.5 * \yHeight + \ydeStart) {$\vec{E}$}; % E field label
+  \draw[] (\xstart - \vsWidth + 0.25 * \vsWidth, \yHeight + 0.5 * \gap) -- (\xstart - 0.5 * \deWidth, 1.5 * \yHeight + 1.5 * \gap + 1.5 * \vsHeight - 0.5 * \yHeight + \ydeStart);
+  
+% Drawing line connecting detectors
+  \draw[{Bar[]}-{Bar[]}] (\xline, \ydeStart + 0.5 * \deHeight) -- (\xline, \yHeight + 0.5 * \gap);
+  \draw[{Bar[]}-{Bar[]}] (\xline, \yHeight + 0.5 * \gap) -- (\xline, \yHeight + \gap + \yHeight - \ydeStart - 0.5 * \deHeight);
+  \draw[] node[left] at (\xline, 0.5 * \yHeight + 0.25 * \gap + 0.5 * \ydeStart) {$d$};
+  \draw[] node[left] at (\xline, 1.5 * \yHeight) {$d$};
+  
+% Drawing electric field vectors
+  \foreach \xloc in {1,...,3}
+  {
+    \draw[decoration={markings,mark=at position 1 with
+    {\arrow[scale=2,>=latex]{>}}},postaction={decorate}] (\xstart - \vsWidth + 0.25 * \vsWidth * \xloc, \yHeight - \vsHeight) -- (\xstart - \vsWidth + 0.25 * \vsWidth * \xloc, \yHeight + \gap + \vsHeight);
+  }
+  
+% Drawing coordinate axis
+  \draw[decoration={markings,mark=at position 1 with
+    {\arrow[scale=1.5,>=latex]{>}}},postaction={decorate}] (\xcoStart, \ycoStart) -- (\xcoStart + \coLength, \ycoStart);
+    \draw[decoration={markings,mark=at position 1 with
+    {\arrow[scale=1.5,>=latex]{>}}},postaction={decorate}] (\xcoStart, \ycoStart) -- (\xcoStart, \ycoStart + \coLength);
+    \draw[decoration={markings,mark=at position 1 with
+    {\arrow[scale=1.5,>=latex]{>}}},postaction={decorate}] (\xcoStart, \ycoStart) -- (\xcoStart - 0.5 * \coLength, \ycoStart - 0.5 * \coLength);
+    \draw[] node[below] at (\xcoStart - 0.5 * \coLength, \ycoStart - 0.5 * \coLength) {$x$};
+    \draw[] node[right] at (\xcoStart + \coLength, \ycoStart) {$y$};
+    \draw[] node[above] at (\xcoStart, \ycoStart + \coLength) {$z$};
+\end{tikzpicture}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

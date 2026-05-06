@@ -1,0 +1,62 @@
+====================================
+*** INITIAL FILL OF LOW PRESSURE TANK
+====================================
+1)  Initial Fill of Low Pressure Tank:
+    a)  Ask PBS-31 to supply gass
+    b)  Open VG-0323 and VG-0317
+    c)  Monitor MP-0004 until gas pressure in the Low Pressure take is stabilized
+    d)  Close VG-0323 and VG-0317
+
+===================
+*** Closing Shutter
+===================
+2)  Fill High Pressure Tank:
+    a)  Check that all valves are closed
+    b)  Open VG-0315, VG-0317, and VG-0301
+    C)  Start compressor
+    d)  Monitor MP-0002 until gas pressure in the High Pressure tank is stabilized
+    e)  Close all valves
+    f)  Stop compressor
+
+3)  Enabling Shutter Closure:
+    a)  Open VG-3014
+    b)  Ask PBS-48 to open SIC valves (VG-0321, and VG-0322)
+
+4)  Closing the Shutter:
+    a)  Open VG-0301
+    b)  Monitor the shutter status until it is closed
+    c)  Close VG-3014
+    d)  Ask PBS-48 to close SIC valves (VG-0321, and VG-0322)
+    e)  Close VG-301?
+
+===================
+*** Opening Shutter
+===================
+1)  Enabling Shutter Opening:
+    a)  Open VG-3014
+    b)  Ask PBS-48 to open SIC valves (VG-0321, and VG-0322)
+
+2)  Opening Shutter:
+    a)  Open VG-0319
+    b)  Monitor MP-0002 and MP-0004 until gas pressure in the Low Pressure tank
+        is stabilized
+    c)  Monitor the shutter status until it is open
+    d)  Close VG-0219
+    e)  Close VG-3014
+    f)  Ask PBS-48 to close SIC valves (VG-0321, and VG-0322)
+
+===========================
+*** CLEAR LOW PRESSURE TANK
+===========================
+1)  Clear Low Pressure tank:
+    a)  Ask PBS-31 for a vacuum in the pipe
+    b)  Open VG-0317, and VG-0323
+    c)  Monitor MP-0001 and MP-0004 until they show that the vacuum has
+        stabilized
+    d)  Close VG-0317 and VG-0323
+    e)  Reset the request to PBS-31
+
+
+
+
+

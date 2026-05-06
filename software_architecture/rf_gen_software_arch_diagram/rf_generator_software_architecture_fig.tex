@@ -1,0 +1,29 @@
+\begin{tikzpicture}
+    \tikzmath{\xOpi = 0; \yOpi = 10; \yEpics = 5; \yStrm = 0; \yAsyn = -4; \yMaster = -7.5; \yEth = -12;}
+    \node[align=center, minimum size=3cm, draw, rectangle, rounded corners](opi) at (\xOpi,\yOpi) {\underline{CS Studio/BOY}\\ \smallskip \\ RF Cleaning Control Panel\\ Power Setpoint/Readback\\ Mirror Cleaning Scheduler (Read)\\ Status \& fault display};
+
+    \node[align=center, minimum size=3cm, draw, rectangle, rounded corners](epics-db) at (\xOpi,\yEpics) {\underline{\textbf{EPICS Record Database}}\\ \smallskip \\ \textbf{Ao:} RF\_Power\_SP \\ \textbf{Ai:} RF\_Power\_RB \\ \textbf{Ai:} RF\_Refl\_Power \\ \textbf{Bo:} RF\_Enable (on/off) \\ \textbf{Messages:} RF\_Status};
+
+    \node[align=center](connect) at (\xOpi/2, \yEpics + \yOpi/2 - \yEpics/2){CA/pvAccess};
+
+    \node[align=center, minimum size=3cm, draw, rectangle, rounded corners](strm-dev) at (\xOpi,\yStrm) {\underline{\textbf{StreamDevice}}\\ \smallskip \\ Custom .proto file \\ ASCII command patterns \\ Async I/O via ASYN port \\ Polling for status \\ Readback};
+
+    \node[align=center](epics2strm-dev) at (\xOpi/2, \yStrm + \yEpics/2 - \yStrm/2){Read/Write Records};
+
+    \node[align=center, minimum size=2cm, draw, rectangle, rounded corners](asyn-drv) at (\xOpi,\yAsyn) {\underline{\textbf{ASYN Port Driver}}\\ \smallskip \\ $\left\langle IP ADDR:PORT \right\rangle$ \\ Points to software running on master controller};
+
+    \node[align=center](strm2asyn) at (\xOpi/2, \yAsyn + 1.75){I/O};
+
+    \node[align=center, minimum size=1cm, draw, rectangle, rounded corners, fill=red!20](master-ctrl) at (\xOpi,\yMaster) {\underline{\textbf{Master Controller}}\\ \smallskip \\ Software controller for RF Generator};
+
+    \node[align=center, minimum size=1cm, draw, diamond](eth-decis) at (\xOpi,\yEth) {TCP Socket \\ Ethernt/Byte stream};
+
+    \draw[latex-] (opi) -- (connect);
+    \draw[-latex] (connect) -- (epics-db);
+    \draw[latex-] (epics-db) -- (epics2strm-dev);
+    \draw[-latex] (epics2strm-dev) -- (strm-dev);
+    \draw[latex-] (strm-dev) -- (strm2asyn);
+    \draw[-latex] (strm2asyn) -- (asyn-drv);
+    \draw[latex-latex] (asyn-drv) -- (master-ctrl);
+    \draw[latex-latex] (master-ctrl) -- (eth-decis);
+\end{tikzpicture}

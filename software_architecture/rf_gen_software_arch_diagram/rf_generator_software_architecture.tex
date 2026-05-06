@@ -1,0 +1,139 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage[normalem]{ulem}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{array} 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ % For code snippets
+\usepackage{listings}
+\usepackage{color}
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+
+\lstset{frame=tb,
+  language=C,
+  aboveskip=3mm,
+  belowskip=3mm,
+  showstringspaces=false,
+  columns=flexible,
+  basicstyle={\small\ttfamily},
+  numbers=none,
+  numberstyle=\tiny\color{gray},
+  keywordstyle=\color{blue},
+  commentstyle=\color{dkgreen},
+  stringstyle=\color{mauve},
+  breaklines=true,
+  breakatwhitespace=true,
+  tabsize=3
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Declaring shapes that will be used when creating block diagrams using the tikz package%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric, arrows, math}
+
+\tikzstyle{camera} = [rectangle, rounded corners, minimum width=3cm, minimum height=1cm,text centered, draw=black, fill=red!30]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\title{RF Generator Software Architecture}
+
+\begin{document}
+
+%	\maketitle
+%	\tableofcontents
+
+	\begin{figure}
+		\center
+		\input{rf_generator_software_architecture_fig}
+%		\caption{adssaf}
+		\label{fig:hdmi_tx_ss_flow_chart}
+	\end{figure}
+
+%	\newpage
+	
+	
+%	\section{Overview of Beam Steering}
+%	\label{sec:overview}
+%		\input{src/bs_overview}	
+%
+%	\section{Beam Steering GUI}
+%	\label{sec:bs_gui}
+%		\input{src/bs_gui}
+%
+%	\section{Monitor Modes}
+%	\label{sec:monitor_modes}
+%		\input{src/monitor_modes}
+%	
+%	\section{HDMI\_ILock Sub-Block}
+%	\label{sec:hdmi_ilock}
+%		\input{src/hdmi_ilock}
+%	
+%	\section{Digilent rgb2dvi}
+%	\label{sec:rgb2dvi}
+%		\input{src/rgb2dvi}
+%		
+%	\section{lwip Problems}
+%	\label{sec:lwip_problems}
+%		\input{src/lwip_problems}
+		
+%	\section{HDMI 1.4/2.0 Transmitter Subsystem}
+%	\label{sec:hdmi_tx_ss}
+%		\input{src/hdmi_tx_ss}
+
+%	\newpage
+	
+%	\section{FPGA Video Interfacing Notes}
+%	\label{sec:fpga_vid_interfac}
+%		\input{src/fpga_video_interface_notes}
+
+%	\section{Current Project Details}
+%	\label{sec:cur_prj_dets}
+%		\input{src/bs_prj_specs}
+		
+%	\section{Configuring zcu102 Board to Work with Sundance FMC Card}
+%	\label{sec:config_zcu102_for_sundance}
+%		\input{src/config_zcu102_for_sundance_fmc}
+%	
+%	\section{Project Descriptions}
+%	\label{sec:proj_descript}
+%		\input{src/bs_project_descriptions}
+%	
+%	\section{Evaluation License for HDMI 1.4/2.0 Transmitter Subsystem IP}
+%	\label{sec:eval_license_hdim_tx_ss}
+%		\input{src/eval_license_hdim_tx_ss}
+%	
+%	\section{Server Control Commands}
+%	\label{sec:serv_ctrl_cmds}
+%		\input{src/server_ctrl_comands}
+%	
+%	\section{BWS Quick Tune}
+%	\label{sec:bws_quick_tune}
+%		\input{src/bws_quick_tune}
+%	
+%	\section{Build Python UI for Distribution}
+%	\label{sec:build_python_ui_for_dist}
+%		\input{src/build_python_ui_for_distribution}
+%	
+%	\section{FDAC}
+%	\label{sec:fdac}
+%		\input{src/FSMCtrl_IP_rewrite}
+%		
+%	\newpage	
+%	
+%	\section{Working Notes}
+%	\label{sec:working_notes}
+%		\input{src/bs_working_notes}
+		
+\end{document}

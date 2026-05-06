@@ -92,8 +92,8 @@ def get_power() -> int:
     power = _read_param('power_set_point')
     return power[0]
 
-def get_state() -> int:
-    state = _read_param('state')
+def get_rf_state() -> int:
+    state = _read_param('rf_state')
     return state[0]
 
 def get_control_source() -> int:
@@ -109,8 +109,13 @@ def get_reflected_power() -> int:
     return rfl_pwr[0]
 
 def get_match_mode() -> int:
+    func_id = f'{__name__}.get_match_mode'
+    pmsg = Psi_Message()
+
     match_mode = _read_param('match_mode')
-    return match_mode[0]
+    pmsg.debug(func_id, f'RF matcher mode: {match_mode}')
+#    return match_mode[0]
+    return match_mode[0]-1
 
 def get_load_cap() -> int:
     """
@@ -152,14 +157,18 @@ def set_power(set_point: int):
     pmsg.debug(func_id, f'set_point return value is {ret_val}')
     return
 
-def rf_on():
+def rf_on(on_off_state: bool):
     """
-    Turn Rf power on
+    Turn Rf power on or off depending on on_off_state
     """
-    _set_param('rf', 1)
+    func_id = f'{__name__}.rf_on'
+    pmsg = Psi_Message()
+
+#    _set_param('rf', on_off_state)
+    pmsg.debug(func_id, f'turning power on ({on_off_state})')
     return
 
-def rf_off():
+def rf_off(): # probably no need for this function
     """
     Turn Rf power off
     """
@@ -196,7 +205,12 @@ def set_match_mode(m_mode):
         m_mode (int) - Match mode. Set m_mode = 1 for manual, and m_mode = 2
                        for auto
     """
-    _set_param('match_mode', m_mode)
+    func_id = f'{__name__}.set_match_mode'
+    pmsg = Psi_Message()
+
+    match_mode = m_mode + 1
+    _set_param('match_mode', match_mode)
+    pmsg.debug(func_id, f'Match mode set to {match_mode} (1=Manual, 2=Auto)')
     return
 
 

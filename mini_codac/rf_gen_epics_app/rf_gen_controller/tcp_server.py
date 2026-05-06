@@ -25,6 +25,7 @@ def tcp_server(host_ip: str, port: int, bug_level: bool=None):
 
     cmd_table = Cmd_Lookup()
 
+    dcntr = 0
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as sock:
         sock.bind((host_ip, int(port)))
         sock.listen()
@@ -57,9 +58,14 @@ def tcp_server(host_ip: str, port: int, bug_level: bool=None):
                             pmsg.debug(func_id, f'({idx}) client msg: {line}, args: {cmd_arg}')
 
                         else:
-                            snd_data = str(cmd_table.cmd_lookup(line))
+                            if (line.split("?")[0] == 'SINE'): # dummy data for plot demo in CSS
+#                                snd_data = str(np.sin(0.1*dcntr))
+                                snd_data = str((dcntr%10)/10)
+                                dcntr += 1
+                            else:
+                                snd_data = str(cmd_table.cmd_lookup(line))
 
-                            pmsg.debug(func_id, f'({idx}) client msg: {line}, server resp: {snd_data}')
+                            pmsg.debug(func_id, f'(idx = {idx}, dcntr = {dcntr}, snd_data = {snd_data}')
                             conn.sendall(snd_data.encode("utf-8"))
 
                         idx += 1

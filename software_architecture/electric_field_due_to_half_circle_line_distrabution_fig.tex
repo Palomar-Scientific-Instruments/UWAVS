@@ -1,0 +1,19 @@
+\begin{tikzpicture}
+  \tikzmath{\x = 0; \y = 0; \rad = 3; \cx = 0.5; \cy = 1.0; \clength = 1;}
+  
+  \draw[ultra thick] (\x, \y) arc(0:180:\rad); % semicircle
+  \draw (-\rad, \y) -- (\x, \y); % x axis
+  
+  \draw (-\rad, \y) -- (-\rad + \rad * 0.70710678118654757, \y + \rad * 0.70710678118654757); %radius
+  \draw node[above left] at (-\rad + 0.65 * \rad * 0.70710678118654757, \y + 0.65 * \rad * 0.70710678118654757) {$r$}; % radius label
+  
+  \draw (-0.5 * \rad + \x, \y) arc(0:45:0.5 * \rad); % angle line
+  \draw node[] at (-\rad + 0.6 * \rad * 0.92387953251128674, \y + 0.6 * \rad * 0.38268343236508978) {$\theta$}; % angle label
+  
+  \draw[<->] (\cx, \cy + \clength) -- (\cx, \cy) -- (\cx + \clength, \cy); % coordinate axis
+  \draw node[right] at (\cx + \clength, \cy) {$x$}; % x label
+  \draw node[right] at (\cx, \cy + \clength) {$y$}; % y label
+  
+  \draw node[anchor = north] at (\x - \rad, \y) {$p$};
+  \draw[fill, black] (\x - \rad, \y) circle[radius = 0.075];
+\end{tikzpicture}

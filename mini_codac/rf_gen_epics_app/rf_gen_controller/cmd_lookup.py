@@ -9,8 +9,8 @@ from numpy.random      import randint
 from psi_message       import Psi_Message
 from rf_gen_controller import (get_control_source, get_forward_power, get_ip,
                                get_load_cap, get_match_mode, get_phase,
-                               get_power, get_reflected_power, get_state,
-                               get_tune_cap, set_power)
+                               get_power, get_reflected_power, get_rf_state,
+                               get_tune_cap, set_power, set_match_mode)
                                
 
 class Cmd_Lookup():
@@ -30,19 +30,20 @@ class Cmd_Lookup():
 
         self._lookup = {
                 #                        'IPADDR?'  : self.get_ipaddr,
-                        'IPADDR?'  : get_ip,
-                        'IPMODE?'  : self.get_ipmode,
-                        'HOSTNAME?': self.get_hostname,
-                        'GETPOWER?' : get_power,
-                        'GETSTATE?' : get_state,
-                        'GETCTRLSRC?' : get_control_source,
-                        'GETFWDPWR?'  : get_forward_power,
-                        'GETRFLPWR?'  : get_reflected_power,
+                        'IPADDR?'       : get_ip,
+                        'IPMODE?'       : self.get_ipmode,
+                        'HOSTNAME?'     : self.get_hostname,
+                        'GETPOWER?'     : get_power,
+                        'GETCTRLSRC?'   : get_control_source,
+                        'GETFWDPWR?'    : get_forward_power,
+                        'GETRFLPWR?'    : get_reflected_power,
                         'GETMATCHMODE?' : get_match_mode,
                         'GETLDCAP?'     : get_load_cap,
                         'GETTNCAP?'     : get_tune_cap,
                         'GETPHASE?'     : get_phase,
-                        'SETPOWER$'     : self.power_set
+                        'GETRFSTATUS?'  : get_rf_state,
+                        'SETPOWER$'     : self.power_set,
+                        'SETMATCHMODE$' : set_match_mode
                        }
 
         return
