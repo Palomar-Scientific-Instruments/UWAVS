@@ -1,0 +1,130 @@
+%\subsection{FBS Mapping to E.A. Procedures}
+%\label{subsec:procedure_map}
+All E.A. procedures that are to be mapped can be found under "D1-N9 Operation Procedure". The activities/actions in E.A. are in bold text. The FBS functions are given by the FBS tab name (acronym) and the cell number (i.e. COTS k45 referrers to cell K45 in the COTS tab of the FBS).
+
+%\subsubsection{Expert Operation}
+%\label{subsubsec:expert_operation}
+%The procedures to be mapped are as follows:
+%\begin{itemize}
+%	\item Manage emissivity map
+%	\item Active alignment
+%	\item Calibration
+%	\item Mirror Cleaning
+%	\item Transmission Monitoring
+%	\item BEOC Cooling
+%	\item Pneumatic Shutter
+%\end{itemize}
+
+%\subsubsection{Pneumatic Shutter}
+\subsection{Pneumatic Shutter}
+\label{subsubsec:pneumatic_shutter}
+This procedure can be found under \textbf{Expert Operation}.
+\begin{itemize}
+	\item \underline{\textbf{Initial fill of low pressure tank}}
+		\begin{itemize}
+			\item \textbf{Request gas supply:}  ?
+			\item \textbf{Open supply valves:} COTS K280, COTS K302
+			\item \textbf{Monitor pressure:} COTS K310
+			\item \textbf{Close supply valves:} COTS K280, COTS K302
+		\end{itemize}
+		
+	\item \underline{\textbf{Clear low pressure tank}}
+		\begin{itemize}
+			\item \textbf{Obtain vacuum:} ?
+			\item \textbf{Open intake valves:} COTS K280, COTS K320
+			\item \textbf{Monitor pressure:} COTS K310, COTS K313
+			\item \textbf{Close intake valves:} COTS 280, COTS 320
+		\end{itemize}
+	
+	\item \underline{\textbf{Open shutter}}
+		\begin{itemize}
+			\item \textbf{Request open SIC valves:} ?
+				\begin{itemize}
+					\item \textbf{Open VG-3014:} Not under our control
+					\item \textbf{Open SIC valves:} COTS K41, COTS K52
+				\end{itemize}
+			\item \textbf{Opening shutter:}
+				\begin{itemize}
+					\item \textbf{Open VG-3019:} COTS K258
+					\item \textbf{Monitor low pressure tank:} COTS 310
+					\item \textbf{Monitor shutter:} DPC N597
+					\item \textbf{Close VG-3019:} COTS K258
+					\item \textbf{Close VG-3014:} Not under our control
+					\item \textbf{Close SIC valves:} COTS K41, COTS K52
+				\end{itemize}
+		\end{itemize}
+		
+	\item \underline{\textbf{Close shutter}}
+		\begin{itemize}
+			\item \textbf{Fill high pressure tank:}
+				\begin{itemize}
+					\item \textbf{Close all valves:} COTS K258, COTS K269, COTS K280, COTS K291, COTS K302
+					\item \textbf{Open valves:} COTS K291, COTS K280
+					\item \textbf{Start Compressor:} COTS K318
+					\item \textbf{Monitor high pressure tank:} COTS K307
+					\item \textbf{Close all valves:} COTS K258, COTS K269, COTS K280, COTS K291, COTS K302
+					\item \textbf{Stop compressor:} COTS K318
+				\end{itemize}
+		\end{itemize}
+\end{itemize}
+
+%\subsubsection{Mirror Cleaning}
+\subsection{Mirror Cleaning}
+\label{subsubsec:mc}
+This procedure can be found under \textbf{Expert Operation}.
+\begin{itemize}
+	\item \underline{\textbf{Send request for mirror cleaning:}} OPR K425
+	\item \underline{\textbf{Receive 'trigger' from D1:}} GLB K16
+	\item \underline{\textbf{Initialize MC}} 
+		\begin{itemize}
+			\item \textbf{Configure RF gen:} OPR K439
+			\item \textbf{Configure RF matchers:} OPR K439
+			\item \textbf{Open shutter:} See "Pneumatic Shutter" procedure
+			\item \textbf{Send 'ready' to D1:} GLB K29 
+		\end{itemize}
+	\item \underline{\textbf{Start MC}}
+		\begin{itemize}
+			\item \textbf{Mirror temps out of bounds:} COTS N492, COTS N494
+			\item \textbf{Too much power:} OPR K485
+			\item \textbf{MC cleaning time reached:} OPR K485
+			\item \textbf{Operator intervention:} OPR K485
+			\item \textbf{Stop from D1:} GLB K20
+		\end{itemize}
+	\item \underline{\textbf{Stop RF power:}} COTS K195
+	\item \underline{\textbf{Transmission monitoring:}} See "Transmission Monitoring" procedure
+	\item \underline{\textbf{Publish:}} GLB K29
+\end{itemize}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
